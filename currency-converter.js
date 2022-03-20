@@ -133,6 +133,7 @@ let addStableCoins = (symbols) => {
 
 
 module.exports = {
+    state,
     setApi,
     convert,
     addStableCoins,
