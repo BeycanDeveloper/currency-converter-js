@@ -100,9 +100,9 @@ let convertWithCryptoCompare = async (from, to, amount)  => {
     let apiUrl = state.apiUrl + '?fsym=' + from + '&tsyms=' + to;
     let response = await axios.get(apiUrl);
     let convertData = response.data;
-    if (convertData[to]) {
-        let price = amount * convertData[to];
-        return parseFloat(price.toFixed());
+    if (convertData[to.toUpperCase()]) {
+        let price = amount * convertData[to.toUpperCase()];
+        return parseFloat(price);
     } else {
         return null;
     }
