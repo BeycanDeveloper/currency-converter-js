@@ -1,7 +1,7 @@
 {
   "namespace": "beycandeveloper",
   "name": "@beycandeveloper/currency-converter",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "It takes on the task of converting between fiat and cryptocurrencies.",
   "license": "MIT",
   "browser": "dist/currency-converter.js",

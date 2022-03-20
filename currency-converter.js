@@ -93,7 +93,8 @@ class CurrencyConverter {
         let convertData = response.data;
 
         if (convertData.data) {
-            return parseFloat(price.toFixed(convertData.data.quote[strtoupper(to)].price));
+            let price = convertData.data.quote[to.toUpperCase()].price;
+            return parseFloat(price);
         } else {
             return null;
         }
@@ -121,7 +122,7 @@ class CurrencyConverter {
         let convertData = response.data;
         if (convertData[to]) {
             let price = amount * convertData[to];
-            return parseFloat(price.toFixed(6));
+            return parseFloat(price.toFixed());
         } else {
             return null;
         }
